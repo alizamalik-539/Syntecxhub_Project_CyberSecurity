@@ -1,27 +1,31 @@
-This project is a network security tool built using Python to identify open ports on a target host. It allows an auditor to scan a specific IP address or a range of devices to determine which services are active and potentially vulnerable.
+# Syntecxhub Cybersecurity Internship - Projects
 
-By using the Three-Way Handshake (SYN, SYN-ACK, ACK) logic, the script attempts to establish a connection with the target. If the connection is successful, the port is flagged as OPEN.
+This repository contains the completed tasks for my Cybersecurity Internship at **Syntecxhub**. 
 
-🚀 Key Features
-Multi-Target Capability: Scans multiple IP addresses (Windows 7, Windows 10, and Android) in a single run.
+## 🛡️ Project 1: Multi-Target Port Scanner
+A Python-based network reconnaissance tool designed to identify active services across multiple devices.
 
-High Performance: Implemented Multi-threading using the threading library to scan dozens of ports simultaneously, significantly reducing scan time.
+### Features:
+- **Multi-Host Scanning:** Simultaneously scans Windows 7, Windows 10, and Android devices.
+- **Concurrency:** Uses `threading` to perform high-speed scans.
+- **Protocol:** Implements TCP Three-Way Handshake logic using the `socket` library.
+- **Reporting:** Automatically logs open ports to `scan_report.txt`.
 
-Protocol Support: Utilizes the socket library to communicate over the TCP protocol.
+---
 
-Logging: Automatically generates a scan_report.txt file containing the timestamp and the results of the scan for official documentation.
+## 🔐 Project 2: AES Password Manager
+A secure cryptographic vault for local credential storage.
 
-🛠️ Technical Implementation
-Language: Python 3.x
+### Features:
+- **Encryption:** Uses **AES-128 Symmetric Encryption** via the `cryptography` library (Fernet).
+- **Security Gate:** Implemented a **Master Password** authentication system.
+- **Functionality:** Supports adding, retrieving, and searching for encrypted credentials.
+- **Persistence:** Securely saves encrypted cipher-text to a local file, ensuring zero plain-text storage.
 
-Libraries: socket, threading, datetime
-
-Concurrency: ThreadPoolExecutor / Threading logic for parallel processing.
-
-📊 How to Use
-Open scanner.py.
-
-Update the targets list with your laboratory IP addresses.
+### How to Run:
+1. Install dependencies: `pip install cryptography`
+2. Run `keygen.py` once to generate your encryption key.
+3. Run `manager.py` to access the vault.
 
 Run the script: python scanner.py.
 
