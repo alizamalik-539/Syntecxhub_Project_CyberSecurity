@@ -1,0 +1,7 @@
+CYBERSECURITY SCAN REPORT
+Date: 2026-01-24 21:19:18.769734
+========================================
+
+[+] FOUND: 192.168.100.73 has Port 135 OPEN
+[+] FOUND: 192.168.100.73 has Port 139 OPEN
+[+] FOUND: 192.168.100.73 has Port 445 OPEN
