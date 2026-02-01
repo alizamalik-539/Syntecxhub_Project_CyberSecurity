@@ -1,0 +1,34 @@
+🔒 Encrypted Multi-Client Chat App
+A secure, real-time chat application built in Python that demonstrates core cybersecurity principles including Symmetric Encryption, TCP Networking, and Concurrency. This project was developed as part of my Cybersecurity Internship at SyntecxHub.
+
+🎯 Project Overview
+The goal of this project was to create a client/server environment where messages are protected against eavesdropping (Man-in-the-Middle attacks) using industry-standard encryption.
+
+🚀 Features
+AES-256 Encryption: Messages are encrypted using the Advanced Encryption Standard (AES) in CFB mode before being sent over the network.
+
+TCP Socket Communication: Reliable data transfer using the Transmission Control Protocol.
+
+Multi-Client Support: The server uses Python’s threading library to handle multiple simultaneous connections without blocking.
+
+Safe IV Usage: Each message utilizes a unique, cryptographically secure Initialization Vector (IV) to prevent cryptographic pattern analysis.
+
+Audit Logging: All incoming encrypted traffic is logged to a local file (chat_log.txt) for security forensics and monitoring.
+
+🛠️ Tech Stack
+Language: Python 3.x
+
+Library: cryptography (for AES implementation)
+
+Networking: socket (TCP/IP)
+
+Concurrency: threading
+
+📂 Project Structure
+server.py: The multi-threaded listener that decrypts messages and logs traffic.
+
+client.py: The interactive interface that encrypts user input and sends it to the server.
+
+encryptor_test.py: A standalone script to verify encryption/decryption logic.
+
+chat_log.txt: The automatically generated audit trail.
