@@ -1,0 +1,26 @@
+# Automated SQL Injection Scanner 🛡️
+
+A professional Python-based security tool developed during my Cybersecurity Internship at **Syntecxhub**. This script is designed to automate the process of probing web inputs for SQL Injection (SQLi) vulnerabilities.
+
+## 🚀 Project Overview
+This project fulfills the requirements for **Project 1** of the Syntecxhub Internship. It uses a custom-built scanning engine to detect database error signatures in server responses, helping developers identify and remediate security flaws.
+
+### Key Features
+- **Probing Engine**: Automatically tests common SQLi patterns (Single quote, Tautologies, Comment-based).
+- **Session-Aware**: Uses authentication cookies (PHPSESSID) to scan protected areas of a web application.
+- **Indicator Detection**: Specifically designed to catch MariaDB/MySQL syntax error leaks.
+- **Professional Reporting**: Generates a detailed Vulnerability Assessment Report (VAR) with risk ratings and remediation steps.
+- **Ethical Safeguards**: Includes rate-limiting and is configured for legal, local-host testing (DVWA).
+
+## 🛠️ Technical Stack
+- **Language**: Python 3
+- **Libraries**: `requests`, `time`
+- **Environment**: XAMPP / Damn Vulnerable Web Application (DVWA)
+
+## 📊 Sample Output
+```text
+🚀 Running Final Internship Probe...
+[!] VULNERABILITY DETECTED: Payload [']
+[-] Payload [1' OR '1'='1] was blocked. Is Security set to LOW in DVWA?
+[!] VULNERABILITY DETECTED: Payload [admin' --]
+✅ Professional Report Generated: SQL_Injection_Scanner_Report.txt
