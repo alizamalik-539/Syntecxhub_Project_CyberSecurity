@@ -1,0 +1,49 @@
+============================================================
+      VULNERABILITY REPORT: SQL INJECTION
+============================================================
+DATE: Sun Feb  8 21:55:17 2026
+TARGET: http://localhost/dvwa/vulnerabilities/sqli/
+ASSESSOR: Cyber Security Intern
+STATUS: CRITICAL VULNERABILITIES IDENTIFIED
+
+1. EXECUTIVE SUMMARY
+--------------------
+During the security assessment, the automated scanner identified multiple
+critical entry points susceptible to SQL Injection (SQLi).
+
+2. TECHNICAL FINDINGS
+---------------------
+[+] PAYLOAD: '
+    RESULT: VULNERABLE
+    SEVERITY: CRITICAL
+    INDICATOR: MySQL/MariaDB Syntax Error Leakage
+
+[+] PAYLOAD: 1' OR '1'='1
+    RESULT: SECURE
+    SEVERITY: N/A
+    INDICATOR: No Database Error detected
+
+[+] PAYLOAD: admin' --
+    RESULT: VULNERABLE
+    SEVERITY: CRITICAL
+    INDICATOR: MySQL/MariaDB Syntax Error Leakage
+
+[+] PAYLOAD: 1' UNION SELECT 1,2--
+    RESULT: VULNERABLE
+    SEVERITY: CRITICAL
+    INDICATOR: MySQL/MariaDB Syntax Error Leakage
+
+[+] PAYLOAD: ') OR ('1'='1
+    RESULT: VULNERABLE
+    SEVERITY: CRITICAL
+    INDICATOR: MySQL/MariaDB Syntax Error Leakage
+
+3. RISK IMPACT
+--------------
+* DATA EXFILTRATION: Attackers can dump user tables.
+* AUTHENTICATION BYPASS: Bypassing login forms.
+
+4. REMEDIATION STRATEGIES
+-------------------------
+[HIGH] Use Prepared Statements (Parameterized Queries).
+============================================================
